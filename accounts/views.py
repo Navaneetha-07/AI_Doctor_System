@@ -27,8 +27,13 @@ def register(request):
             user.save()
 
             return redirect('login')
+        else:
+            print(form.errors)
+            
 
     else:
+        
+        
 
         form = RegisterForm()
 
